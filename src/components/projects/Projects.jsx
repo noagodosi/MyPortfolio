@@ -26,7 +26,7 @@ const items = [
       "A Wedding Bride Salon system that is used to schedule appointments and fully manages the reservation, including statistics about the website usage.",
     img: "BRIDETOBE.png",
     technologies:
-      "developed with React.js, Node.js (Express),CSS ,MongoDB. CircleCi Heroku ESLint Prettier Npm package manager Mocha test frameworkfor NodeJS Chai assertion library for NodeJS.",
+      "Developed with React.js, Node.js (Express),CSS ,MongoDB. CircleCi Heroku ESLint Prettier Npm package manager Mocha test frameworkfor NodeJS Chai assertion library for NodeJS.",
   },
 ];
 
@@ -70,7 +70,7 @@ const Projects = () => {
 
   const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
   return (
-    <div className="projectsContainer" ref={ref}>
+    <div className="projects" ref={ref}>
       <div className="progress">
         <h1>My Projects</h1>
         <motion.div className="progressBar" style={{ scaleX }}></motion.div>

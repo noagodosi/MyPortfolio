@@ -1,4 +1,4 @@
-.projectsContainer {
+.projects {
   position: relative;
   z-index: 1;
   // background-color: rgba(204, 201, 201, 0.298);
@@ -38,11 +38,13 @@
 
       .imageContainer {
         flex: 1;
-        height: 50%;
+        // height: 50%;
         img {
           height: 100%;
           width: 100%;
           object-fit: contain;
+          box-shadow: 0 4px 8px 0 rgba(138, 133, 133, 0.31),
+          0 6px 20px 0 rgba(221, 219, 219, 0.99);
         }
       }
 
@@ -64,9 +66,8 @@
         }
 
         button {
-        
-            background-color: #f6f5f2;
-            color: #070707b9;
+          background-color: #f6f5f2;
+          color: #070707b9;
           border: none;
           border-radius: 10px;
           padding: 10px;
