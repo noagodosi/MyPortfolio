@@ -1,0 +1,91 @@
+.hero {
+  height: calc(100vh - 80px);
+  width: 100%;
+  overflow: hidden;
+  background-color: white;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+
+  .wrapper {
+    flex: 1;
+    padding: 200px;
+    height: 100%;
+    .imageContainerBg {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      .imgBg {
+        img {
+          width: 100%;
+          position: relative;
+          opacity: 0.9;
+          box-shadow: 0 4px 8px 0 rgba(90, 83, 83, 0.31),
+            0 6px 20px 0 rgba(29, 27, 27, 0.367);
+            // filter: grayscale(100%);
+        }
+      }
+      .textContainer {
+        flex: 1;
+        color: white;
+        height: 100%;
+        width: 50%;
+        display: flex;
+        // justify-content: center;
+        position: absolute;
+        z-index: 1;
+        flex-direction: column;
+        gap: 40px;
+        padding: 70px;
+
+        h2 {
+          padding-top: 30px;
+          font-size: 35px;
+          color: #ffffffc0;
+          font-weight: 600;
+          letter-spacing: 10px;
+        }
+
+        h1 {
+          font-size: 70px;
+          color: #ffffff;
+          font-weight: 600;
+        }
+
+        .buttons {
+          button {
+            padding: 10px;
+            width: 180px;
+            border: 2px solid rgba(185, 173, 173, 0.547);
+            border-radius: 10px;
+            background-color: transparent;
+            color: rgb(185, 173, 173);
+            margin-right: 20px;
+            cursor: pointer;
+            font-weight: 300;
+            font-size: 14px;
+          }
+        }
+        .scrollImg {
+          position: relative;
+          width: 50px;
+          opacity: 1;
+        }
+      }
+    }
+    // .slidingTextContainer {
+    //   position: absolute;
+    //   z-index: -1;
+    //   font-size: 40vh;
+    //   bottom: -120px;
+    //   white-space: nowrap;
+    //   color: #e3e1d921;
+    //   font-weight: bold;
+    //   width: 50%;
+    // }
+  }
+}
