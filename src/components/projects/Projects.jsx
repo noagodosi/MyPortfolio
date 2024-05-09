@@ -10,6 +10,7 @@ const items = [
       "Mobile application offering easy-to-make, nutritious meals tailored for babies based on their age and allergies, simplifying meal preparation for young parents.",
     img: "BABYUP.png",
     technologies: "Developed with React Native and Firebase.",
+    git:"https://github.com/noafadida/BabyUp"
   },
   {
     id: 2,
@@ -18,6 +19,7 @@ const items = [
       "React Admin Dashboard App With Theming, Tables, Charts, Calendar, Kanban and More.",
     img: "ADMINDASHBOARD.png",
     technologies: "Developed with React.js Syncfusion and Mongodb.",
+    git:"https://github.com/noafadida/AdminDashboardShop"
   },
   {
     id: 3,
@@ -27,6 +29,7 @@ const items = [
     img: "BRIDETOBE.png",
     technologies:
       "Developed with React.js, Node.js (Express),CSS ,MongoDB. CircleCi Heroku ESLint Prettier Npm package manager Mocha test frameworkfor NodeJS Chai assertion library for NodeJS.",
+    git:"https://github.com/noafadida/BrideToBe"
   },
 ];
 
@@ -52,7 +55,7 @@ const Single = ({ item }) => {
             <h2>{item.title}</h2>
             <p>{item.description}</p>
             <p>{item.technologies}</p>
-            <button>Read More </button>
+            <button onClick={()=>window.open(item.git)}>See More </button>
           </motion.div>
         </div>
       </div>

@@ -50,9 +50,12 @@
       }
 
       h2 {
-        font-size: 16px;
+        font-size:20px;
         font-weight: 300;
         color: #000000ce;
+        @include mobile {
+          font-size: 16px;
+        }
       }
       .social {
         padding-top: 10px;

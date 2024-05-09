@@ -14,17 +14,18 @@ const Navbar = () => {
           NOA GODOSI
         </motion.span>
         <div className="social">
-          <a href="#">
+          <a href="https://github.com/noafadida">
             {" "}
-            <img src="/facebook.png" alt="" />
+            <img src="/git.png" alt="" />
           </a>
-          <a href="#">
-            {" "}
-            <img src="/instagram.png" alt="" />
-          </a>
-          <a href="#">
+
+          <a href="https://il.linkedin.com/in/noa-fadida-35ba73216?trk=people-guest_people_search-card">
             {" "}
             <img src="/linkedin.png" alt="" />
+          </a>
+          <a href="https://www.instagram.com/noafadida/">
+            {" "}
+            <img src="/instagram.png" alt="" />
           </a>
         </div>
       </div>
