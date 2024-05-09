@@ -74,7 +74,7 @@
 
   .formContainer {
     flex: 1;
-    position: relative;
+    // position: relative;
 
     @include mobile {
       flex: 2;
@@ -88,15 +88,19 @@
       padding: 10px;
       margin: auto;
       z-index: -1;
+      // height: 100%;
+      // width: 100%;
+      // flex:1;
+      // display: flex;
+      // align-self: center;
+      // justify-self: center;
 
-      svg{
+      svg {
         @include mobile {
           width: 200px;
           height: 200px;
         }
       }
-
-      
     }
     form {
       display: flex;
