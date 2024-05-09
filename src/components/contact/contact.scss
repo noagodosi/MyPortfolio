@@ -12,15 +12,19 @@
     width: 100%;
     padding: 10px;
     flex-direction: column;
+    gap: 0;
   }
 
   .textContainer {
     flex: 1;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 20px;
 
     @include mobile {
+      flex: 1;
       text-align: center;
       align-items: center;
       margin-top: 70px;
@@ -40,6 +44,11 @@
       flex-direction: column;
       gap: 10px;
       padding: 10px;
+
+      @include mobile {
+        padding: 0;
+      }
+
       h2 {
         font-size: 16px;
         font-weight: 300;
@@ -52,6 +61,7 @@
         cursor: pointer;
         @include mobile {
           align-self: center;
+          padding-top: 0px;
         }
 
         img {
@@ -67,16 +77,26 @@
     position: relative;
 
     @include mobile {
+      flex: 2;
       width: 100%;
-      padding: 10px;
+      padding: 50px;
     }
 
     .phoneSvg {
       position: absolute;
-      stroke: rgba(185, 173, 173, 0.705);
+      stroke: rgba(199, 179, 179, 0.705);
       padding: 10px;
       margin: auto;
       z-index: -1;
+
+      svg{
+        @include mobile {
+          width: 200px;
+          height: 200px;
+        }
+      }
+
+      
     }
     form {
       display: flex;
