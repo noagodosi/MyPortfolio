@@ -25,27 +25,13 @@ const textVariants = {
   },
 };
 
-// const sliderVariants = {
-//   initial: {
-//     x: 0,
-//   },
-//   animate: {
-//     x: "-220%",
-//     transition: {
-//       repeat: Infinity,
-//       repeatType: "mirror",
-//       duration: 20,
-//     },
-//   },
-// };
-
 const Hero = () => {
   return (
     <div className="hero">
       <div className="wrapper">
         <div className="imageContainerBg">
           <div className="imgBg">
-          <img src="/hero4.png" alt="" />
+            <img src="/hero4.png" alt="" />
           </div>
           <motion.div
             className="textContainer"
@@ -57,28 +43,20 @@ const Hero = () => {
             <motion.h1 variants={textVariants}>
               Hi, I`m Noa A Full Stack Engineer
             </motion.h1>
-            
+
             <motion.div className="buttons" variants={textVariants}>
-              <motion.button variants={textVariants}>
+              <motion.button variants={textVariants} onClick={() => document.getElementById('Projects').scrollIntoView()}>
                 See My Latest Projects
               </motion.button>
-              <motion.button variants={textVariants}>Contact Me</motion.button>
+              <motion.button variants={textVariants} onClick={() => document.getElementById('Contact').scrollIntoView()}>Contact Me</motion.button>
             </motion.div>
-            <motion.img
+            {/* <motion.img
               className="scrollImg"
               variants={textVariants}
               animate="scrollButton"
               src="/scroll.png"
               alt=""
-            />
-            {/* <motion.div
-        className="slidingTextContainer"
-        variants={sliderVariants}
-        initial="initial"
-        animate="animate"
-      >
-        dlkdlkdlkjjjjjjjjjjjjjjjjjjjjjjjjjjj
-      </motion.div> */}
+            /> */}
           </motion.div>
         </div>
       </div>

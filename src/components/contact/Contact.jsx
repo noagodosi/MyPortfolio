@@ -44,6 +44,7 @@ const Contact = () => {
   };
   return (
     <motion.div
+      id="Contact"
       className="contact"
       variants={variants}
       initial="initial"
