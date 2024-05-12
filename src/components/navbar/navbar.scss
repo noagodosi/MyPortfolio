@@ -12,6 +12,11 @@
     height: 100%;
     width: 100%;
 
+    @include tablet {
+      justify-content: flex-end;
+      padding: 40px;
+    }
+
     @include mobile {
       justify-content: flex-end;
       padding: 20px;
@@ -24,9 +29,15 @@
       letter-spacing: 4px;
       flex: 1;
       font-weight: 600;
+
+      @include tablet {
+        display: none;
+      }
+
       @include mobile {
         display: none;
       }
+
     }
 
     .social {

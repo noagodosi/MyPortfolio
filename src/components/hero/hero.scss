@@ -17,34 +17,53 @@
     padding: 200px;
     height: 100%;
 
+    @include tablet {
+      padding: 5px;
+      background-color: rgba(220, 220, 220, 0.87);
+    }
+
     @include mobile {
       padding: 5px;
       background-color: rgba(220, 220, 220, 0.87);
     }
+
     .imageContainerBg {
       flex: 1;
       display: flex;
       align-items: center;
       height: 100%;
       .imgBg {
+        @include tablet {
+          height: 100%;
+          width: 100%;
+        }
+
         @include mobile {
           height: 100%;
           width: 100%;
         }
+
         img {
           width: 100%;
           position: relative;
           opacity: 0.9;
           box-shadow: 0 4px 8px 0 rgba(138, 133, 133, 0.31),
             0 6px 20px 0 rgba(221, 219, 219, 0.99);
-            @include mobile {
-              height: 50%;
-              width: 100%;
-              background-color: aqua;
-              object-fit: cover;
-            }
+
+          @include tablet {
+            height: 60%;
+            width: 100%;
+            object-fit: cover;
+            // box-shadow: none;
+          }
+
+          @include mobile {
+            height: 50%;
+            width: 100%;
+            object-fit: cover;
+            // box-shadow: none;
+          }
         }
-     
       }
       .textContainer {
         flex: 1;
@@ -58,12 +77,21 @@
         flex-direction: column;
         gap: 40px;
         padding: 70px;
+
+        @include tablet {
+          height: 100%;
+          width: 100%;
+          align-items: center;
+          text-align: center;
+          // padding: 50px;
+        }
+
         @include mobile {
           height: 100%;
           width: 100%;
           align-items: center;
           text-align: center;
-          padding: 0;
+          padding: 0px;
         }
 
         h2 {
@@ -72,6 +100,12 @@
           color: #ffffffc0;
           font-weight: 600;
           letter-spacing: 10px;
+
+          // @include tablet {
+          //   // font-size: 30px;
+          //   // letter-spacing: 8px;
+          // }
+
           @include mobile {
             font-size: 20px;
             letter-spacing: 3px;
@@ -83,6 +117,10 @@
           color: #ffffff;
           font-weight: 600;
 
+          @include tablet {
+            font-size: 50px;
+          }
+
           @include mobile {
             font-size: 30px;
             font-weight: 500;
@@ -90,12 +128,18 @@
         }
 
         .buttons {
+          @include tablet {
+            display: flex;
+            flex:0.7;
+            align-items: flex-end;
+            justify-content: center;
+          }
+
           @include mobile {
-            display:flex ;
-            flex:1;
+            display: flex;
+            flex: 1;
             align-items: center;
             justify-content: center;
-            height: 30px;
             flex-direction: column;
             gap: 20px;
           }
@@ -110,8 +154,17 @@
             cursor: pointer;
             font-weight: 300;
             font-size: 14px;
+
+            @include tablet {
+              background-color: rgba(255, 255, 255, 0.211);
+              width: 250px;
+              font-size: 20px;
+
+            }
             @include mobile {
               background-color: rgba(255, 255, 255, 0.211);
+              width: 180px;
+              font-size: 14px;
             }
           }
         }

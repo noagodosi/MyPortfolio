@@ -8,6 +8,14 @@
   align-items: center;
   gap: 50px;
 
+
+@include tablet {
+    width: 100%;
+    padding: 10px;
+    flex-direction: column;
+    gap: 0;
+  }
+
   @include mobile {
     width: 100%;
     padding: 10px;
@@ -23,6 +31,13 @@
     justify-content: center;
     gap: 20px;
 
+    @include tablet {
+      flex: 1;
+      text-align: center;
+      align-items: center;
+      margin-top: 70px;
+    }
+
     @include mobile {
       flex: 1;
       text-align: center;
@@ -34,6 +49,11 @@
       font-size: 70px;
       font-weight: 600;
       color: #000000de;
+
+      @include tablet {
+        font-size: 60px;
+      }
+
       @include mobile {
         font-size: 36px;
       }
@@ -45,6 +65,10 @@
       gap: 10px;
       padding: 10px;
 
+      @include tablet {
+        padding: 0px;
+      }
+
       @include mobile {
         padding: 0;
       }
@@ -53,15 +77,22 @@
         font-size:20px;
         font-weight: 300;
         color: #000000ce;
+
         @include mobile {
           font-size: 16px;
         }
       }
+
       .social {
         padding-top: 10px;
         display: flex;
         gap: 10px;
         cursor: pointer;
+
+        @include tablet {
+          align-self: center;
+        }
+
         @include mobile {
           align-self: center;
           padding-top: 0px;
@@ -78,6 +109,12 @@
   .formContainer {
     flex: 1;
     // position: relative;
+
+    @include tablet {
+      flex: 2;
+      width: 100%;
+      padding: 50px;
+    }
 
     @include mobile {
       flex: 2;
