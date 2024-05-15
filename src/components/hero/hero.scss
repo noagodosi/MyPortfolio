@@ -14,57 +14,76 @@
 
   .wrapper {
     flex: 1;
-    padding: 200px;
     height: 100%;
 
-    @include tablet {
-      padding: 5px;
-      background-color: rgba(220, 220, 220, 0.87);
-    }
 
-    @include mobile {
-      padding: 5px;
-      background-color: rgba(220, 220, 220, 0.87);
-    }
-
-    .imageContainerBg {
+    .containerBg {
+      
       flex: 1;
       display: flex;
       align-items: center;
+      justify-content: center;
       height: 100%;
-      .imgBg {
+
+      .heroImg{
+        display: flex;
+        align-items: end;
+        justify-content: start;
+        position: relative;
+        background-color: rgba(224, 224, 224, 0.689);
+        height:100%;
+        // width: 80%;
+
         @include tablet {
+          width: 100%;
           height: 100%;
-          width: 100%;
         }
+            img{
+              width: 40%;
+              opacity: 0.9;
+              object-fit: cover;
+              box-shadow: 2px 5px 10px 2px #938484d8;
+              @include tablet {
+                width: 100%;
+                height: 25%;
+                box-shadow: none;
+                object-fit: cover;
+              }
+              
+            }
+            .img2{
+              display: flex;
+height: 100%;
+width: 100%;
+              align-items: center;
+              justify-content: end;
+            
+              img{
+                width: 30%;
+                height: 40%;
+                opacity: 0.9;
+                object-fit: cover;
+                box-shadow: 0 4px 8px 0px #938484d8;
 
-        @include mobile {
-          height: 100%;
-          width: 100%;
-        }
 
-        img {
-          width: 100%;
-          position: relative;
-          opacity: 0.9;
-          box-shadow: 0 4px 8px 0 rgba(138, 133, 133, 0.31),
-            0 6px 20px 0 rgba(221, 219, 219, 0.99);
+                @include tablet {
+                  width: 50%;
+                  box-shadow: none;
+                  object-fit: contain;
+                  box-shadow: none;
+                }
 
-          @include tablet {
-            height: 60%;
-            width: 100%;
-            object-fit: cover;
-            // box-shadow: none;
-          }
-
-          @include mobile {
-            height: 50%;
-            width: 100%;
-            object-fit: cover;
-            // box-shadow: none;
-          }
-        }
+                @include mobile {
+                  width: 80%;
+                  box-shadow: none;
+                  object-fit: contain;
+                  height: 25%;
+                  box-shadow: none;
+                }
+              }
+            }
       }
+      
       .textContainer {
         flex: 1;
         color: white;
@@ -83,7 +102,6 @@
           width: 100%;
           align-items: center;
           text-align: center;
-          // padding: 50px;
         }
 
         @include mobile {
@@ -100,12 +118,7 @@
           color: #ffffffc0;
           font-weight: 600;
           letter-spacing: 10px;
-
-          // @include tablet {
-          //   // font-size: 30px;
-          //   // letter-spacing: 8px;
-          // }
-
+          
           @include mobile {
             font-size: 20px;
             letter-spacing: 3px;
@@ -130,21 +143,25 @@
         .buttons {
           @include tablet {
             display: flex;
-            flex:0.7;
-            align-items: flex-end;
+            width: 100%;
+            padding: 10px;
+            gap:8px;
+            flex: 0.65;
+            align-items: end;
             justify-content: center;
           }
 
           @include mobile {
-            display: flex;
-            flex: 1;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            gap: 20px;
-          }
-          button {
+            width: 100%;
             padding: 10px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            gap:8px;
+          }
+
+          button {
+            height: 40px;
             width: 180px;
             border: 2px solid rgba(185, 173, 173, 0.547);
             border-radius: 10px;
@@ -155,11 +172,16 @@
             font-weight: 300;
             font-size: 14px;
 
+            &:hover {
+              background-color: rgba(255, 255, 255, 0.894);
+              border: 2px solid rgba(185, 173, 173, 0.547);
+            }
+
             @include tablet {
               background-color: rgba(255, 255, 255, 0.211);
               width: 250px;
               font-size: 20px;
-
+              margin-right: 0px;
             }
             @include mobile {
               background-color: rgba(255, 255, 255, 0.211);
@@ -168,11 +190,11 @@
             }
           }
         }
-        .scrollImg {
-          position: relative;
-          width: 50px;
-          opacity: 1;
-        }
+        // .scrollImg {
+        //   position: relative;
+        //   width: 50px;
+        //   opacity: 1;
+        // }
       }
     }
   }

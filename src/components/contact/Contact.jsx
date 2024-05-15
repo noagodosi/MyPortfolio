@@ -55,7 +55,6 @@ const Contact = () => {
         <motion.div variants={variants} className="details">
           <h2>noago212@gmail.com</h2>
           <h2>Israel</h2>
-          {/* <span>Israel</span> */}
           <motion.div variants={variants} className="social">
           <a href="https://github.com/noafadida">
             {" "}

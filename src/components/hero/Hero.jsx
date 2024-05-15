@@ -29,10 +29,15 @@ const Hero = () => {
   return (
     <div className="hero">
       <div className="wrapper">
-        <div className="imageContainerBg">
-          <div className="imgBg">
-            <img src="/hero4.png" alt="" />
+        <div className="containerBg">
+          <div className="heroImg">
+            <img src="/hero3.png" />
+            <div className="img2">
+            <img src="/img2.png" />
           </div>
+          </div>
+         
+         
           <motion.div
             className="textContainer"
             variants={textVariants}
@@ -45,18 +50,23 @@ const Hero = () => {
             </motion.h1>
 
             <motion.div className="buttons" variants={textVariants}>
-              <motion.button variants={textVariants} onClick={() => document.getElementById('Projects').scrollIntoView()}>
+              <motion.button
+                variants={textVariants}
+                onClick={() =>
+                  document.getElementById("Projects").scrollIntoView()
+                }
+              >
                 See My Latest Projects
               </motion.button>
-              <motion.button variants={textVariants} onClick={() => document.getElementById('Contact').scrollIntoView()}>Contact Me</motion.button>
+              <motion.button
+                variants={textVariants}
+                onClick={() =>
+                  document.getElementById("Contact").scrollIntoView()
+                }
+              >
+                Contact Me
+              </motion.button>
             </motion.div>
-            {/* <motion.img
-              className="scrollImg"
-              variants={textVariants}
-              animate="scrollButton"
-              src="/scroll.png"
-              alt=""
-            /> */}
           </motion.div>
         </div>
       </div>

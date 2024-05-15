@@ -6,6 +6,7 @@
   margin: auto;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 50px;
 
 
@@ -159,11 +160,16 @@
       button {
         background-color: #f6f5f2;
         color: #070707b9;
-        border: none;
+        border:none;
         border-radius: 20px;
-        padding: 10px;
-        // width: 200px;
         cursor: pointer;
+        height: 35px;
+        box-sizing: border-box;
+
+        &:hover{
+            background-color: #f6f5f259;
+            border:2px solid #f6f5f2;
+        }
       }
     }
   }

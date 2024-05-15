@@ -15,8 +15,12 @@
     width: 350px;
     background-color: rgba(232, 230, 230, 0.893);
     color: #000000ce;
+
+    @include tablet {
+      width: 300px;
+    }
     @include mobile {
-      width: 200px;
+      width: 170px;
     }
 
     .links {
@@ -31,6 +35,10 @@
 
       a {
         font-size: 40px;
+        @include tablet {
+          font-size: 30px;
+        }
+
         @include mobile {
           font-size: 20px;
         }
