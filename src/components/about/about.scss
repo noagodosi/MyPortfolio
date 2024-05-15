@@ -193,8 +193,7 @@
 
       &:hover {
         background-color: #fffffff1;
-        height: 210px;
-      width: 210px;
+        transform: translateY(-10px) !important;
         cursor: pointer;
 
         img {
@@ -213,11 +212,7 @@
             z-index: 2;
             font-size: 18px;
             font-weight: 500;
-            color: rgb(150, 140, 140);
-
-            &:hover{
-                font-size: larger;
-            }
+            color: rgb(110, 107, 107);
           }
       }
 
@@ -252,3 +247,4 @@
     opacity: 0;
   }
 }
+
