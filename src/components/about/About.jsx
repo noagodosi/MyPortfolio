@@ -130,14 +130,14 @@ const About = () => {
             </a>
             <img src="./BRIDETOBE.png" />
           </motion.div>
-          <motion.div className="item" variants={projectsVariants}>
+          <motion.div className="item" >
             <h4>BabyUp</h4>
             <a onClick={() => document.getElementById("1").scrollIntoView()}>
               See More
             </a>
             <img src="./BABYUP.png" />
           </motion.div>
-          <motion.div className="item" variants={projectsVariants}>
+          <motion.div className="item">
             <h4>Admin Dashboard</h4>
             <a onClick={() => document.getElementById("2").scrollIntoView()}>
               See More

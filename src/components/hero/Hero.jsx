@@ -44,10 +44,16 @@ const Hero = () => {
             initial="initial"
             animate="animate"
           >
-            <motion.h2 variants={textVariants}>NOA</motion.h2>
+            {/* <motion.h2 variants={textVariants}>NOA</motion.h2> */}
             <motion.h1 variants={textVariants}>
-              Hi, I`m Noa A Full Stack Engineer
+              NOA
             </motion.h1>
+
+            <motion.h1 variants={textVariants}>
+          Full Stack Engineer
+            </motion.h1>
+             
+            <h2> I am Software Engineering graduate and full-stack web & mobile developer.</h2>
 
             <motion.div className="buttons" variants={textVariants}>
               <motion.button

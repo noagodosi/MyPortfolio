@@ -28,7 +28,7 @@ const items = [
       "A Wedding Bride Salon system that is used to schedule appointments and fully manages the reservation, including statistics about the website usage.",
     img: "BRIDETOBE.png",
     technologies:
-      "Developed with React.js, Node.js (Express),CSS ,MongoDB. CircleCi Heroku ESLint Prettier Npm package manager Mocha test frameworkfor NodeJS Chai assertion library for NodeJS.",
+      "Developed with React.js, Node.js, CSS, MongoDB. ",
     git: "https://github.com/noafadida/BrideToBe",
   },
 ];

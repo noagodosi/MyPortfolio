@@ -16,7 +16,6 @@
     flex: 1;
     height: 100%;
 
-
     .containerBg {
       flex: 1;
       display: flex;
@@ -24,127 +23,123 @@
       justify-content: center;
       height: 100%;
 
-      .heroImg{
+      .heroImg {
         display: flex;
         align-items: end;
         justify-content: start;
         position: relative;
         background-color: rgba(224, 224, 224, 0.689);
-        height:100%;
+        height: 100%;
         // width: 80%;
 
         @include tablet {
           width: 100%;
           height: 100%;
         }
-            img{
-              width: 40%;
-              opacity: 0.9;
-              object-fit: cover;
-              box-shadow: 2px 5px 10px 2px #938484d8;
-              @include tablet {
-                width: 100%;
-                height: 25%;
-                box-shadow: none;
-                object-fit: cover;
-              }
-              
+        img {
+          width: 40%;
+          opacity: 0.9;
+          object-fit: cover;
+          box-shadow: 2px 5px 10px 2px #938484d8;
+          @include tablet {
+            width: 100%;
+            height: 25%;
+            box-shadow: none;
+            object-fit: cover;
+          }
+        }
+        .img2 {
+          display: flex;
+          width: 100%;
+          align-self: start;
+          justify-content: end;
+
+          @include tablet {
+            padding-top: 0px;
+          }
+
+          img {
+            width: 30%;
+            height: 40%;
+            opacity: 0.9;
+            object-fit: cover;
+            box-shadow: 0 4px 8px 0px #938484d8;
+
+            @include tablet {
+              width: 80%;
+              box-shadow: none;
+              object-fit: contain;
+              box-shadow: none;
             }
-            .img2{
-              display: flex;
-height: 100%;
-width: 100%;
-              align-items: center;
-              justify-content: end;
-            
-              img{
-                width: 30%;
-                height: 40%;
-                opacity: 0.9;
-                object-fit: cover;
-                box-shadow: 0 4px 8px 0px #938484d8;
 
-
-                @include tablet {
-                  width: 50%;
-                  box-shadow: none;
-                  object-fit: contain;
-                  box-shadow: none;
-                }
-
-                @include mobile {
-                  width: 80%;
-                  box-shadow: none;
-                  object-fit: contain;
-                  height: 25%;
-                  box-shadow: none;
-                }
-              }
+            @include mobile {
+              width: 100%;
             }
+          }
+        }
       }
-      
+
       .textContainer {
-        flex: 1;
+        background-color: rgba(255, 255, 255, 0.793);
         color: white;
-        height: 100%;
-        width: 50%;
+        width: 40%;
+        height: 50%;
         display: flex;
-        // justify-content: center;
+        justify-content: center;
         position: absolute;
         z-index: 1;
         flex-direction: column;
-        gap: 40px;
-        padding: 70px;
+        gap: 10px;
+        padding: 20px;
+        box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;;
 
         @include tablet {
-          height: 100%;
-          width: 100%;
-          align-items: center;
-          text-align: center;
+          width: 60%;
+          height: unset;
         }
 
         @include mobile {
-          height: 100%;
-          width: 100%;
-          align-items: center;
-          text-align: center;
-          padding: 0px;
-        }
-
-        h2 {
-          padding-top: 30px;
-          font-size: 35px;
-          color: #ffffffc0;
-          font-weight: 600;
-          letter-spacing: 10px;
-          
-          @include mobile {
-            font-size: 20px;
-            letter-spacing: 3px;
-          }
+          width: 80%;
         }
 
         h1 {
-          font-size: 70px;
-          color: #ffffff;
-          font-weight: 600;
-
+          font-size: 60px;
+          text-align: center;
+          color: rgba(0, 0, 0, 0.743);
+          font-family: "Ysabeau", sans-serif;
+          font-weight: 300;
           @include tablet {
             font-size: 50px;
           }
 
           @include mobile {
             font-size: 30px;
-            font-weight: 500;
+          }
+        }
+
+        h2 {
+          font-size: 20px;
+          text-align: center;
+          color: rgba(0, 0, 0, 0.743);
+          font-family: "Ysabeau", sans-serif;
+          font-weight: 200;
+          @include tablet {
+            font-size: 20px;
+          }
+
+          @include mobile {
+            font-size: 15px;
           }
         }
 
         .buttons {
+          align-self: center;
+          margin-top: 20px;
           @include tablet {
             display: flex;
             width: 100%;
             padding: 10px;
-            gap:8px;
+            gap: 8px;
             flex: 0.65;
             align-items: end;
             justify-content: center;
@@ -156,44 +151,33 @@ width: 100%;
             display: flex;
             align-items: flex-start;
             justify-content: center;
-            gap:8px;
+            gap: 8px;
           }
 
           button {
             height: 40px;
             width: 180px;
-            border: 2px solid rgba(185, 173, 173, 0.547);
-            border-radius: 10px;
-            background-color: transparent;
-            color: rgb(185, 173, 173);
+            border: none;
+            background-color: rgba(0, 0, 0, 0.84);
+            color: rgba(255, 255, 255, 0.839);
             margin-right: 20px;
             cursor: pointer;
             font-weight: 300;
             font-size: 14px;
 
             &:hover {
-              background-color: rgba(255, 255, 255, 0.894);
-              border: 2px solid rgba(185, 173, 173, 0.547);
+              scale: 107%;
             }
 
             @include tablet {
-              background-color: rgba(255, 255, 255, 0.211);
-              width: 250px;
-              font-size: 20px;
               margin-right: 0px;
             }
             @include mobile {
-              background-color: rgba(255, 255, 255, 0.211);
-              width: 180px;
-              font-size: 14px;
+              font-size: 10px;
+              height: 30px;
             }
           }
         }
-        // .scrollImg {
-        //   position: relative;
-        //   width: 50px;
-        //   opacity: 1;
-        // }
       }
     }
   }

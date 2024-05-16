@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
+import { Button, message, Space } from "antd";
 
 import "./contact.scss";
 import { useRef, useState } from "react";
@@ -21,8 +22,20 @@ const variants = {
 
 const Contact = () => {
   const formRef = useRef();
-  const [error, setError] = useState(false);
-  const [success, setSuccess] = useState(false);
+  const [messageApi, contextHolder] = message.useMessage();
+
+  const successMsg = () => {
+    messageApi.open({
+      type: "success",
+      content: "Your message was sent successfully!",
+    });
+  };
+  const errorMsg = () => {
+    messageApi.open({
+      type: "error",
+      content: "Error, please try again.",
+    });
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -35,10 +48,10 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          setSuccess(true);
+          successMsg()
         },
         (error) => {
-          setError(true);
+          errorMsg();
         }
       );
   };
@@ -56,19 +69,19 @@ const Contact = () => {
           <h2>noago212@gmail.com</h2>
           <h2>Israel</h2>
           <motion.div variants={variants} className="social">
-          <a href="https://github.com/noafadida">
-            {" "}
-            <img src="/git.png" alt="" />
-          </a>
+            <a href="https://github.com/noafadida">
+              {" "}
+              <img src="/git.png" alt="" />
+            </a>
 
-          <a href="https://il.linkedin.com/in/noa-fadida-35ba73216?trk=people-guest_people_search-card">
-            {" "}
-            <img src="/linkedin.png" alt="" />
-          </a>
-          <a href="https://www.instagram.com/noafadida/">
-            {" "}
-            <img src="/instagram.png" alt="" />
-          </a>
+            <a href="https://il.linkedin.com/in/noa-fadida-35ba73216?trk=people-guest_people_search-card">
+              {" "}
+              <img src="/linkedin.png" alt="" />
+            </a>
+            <a href="https://www.instagram.com/noafadida/">
+              {" "}
+              <img src="/instagram.png" alt="" />
+            </a>
           </motion.div>
         </motion.div>
       </motion.div>
@@ -106,8 +119,7 @@ const Contact = () => {
           <input type="email" required placeholder="Email" name="email" />
           <textarea rows={8} placeholder="Message" name="message" />
           <button>Submit</button>
-                  {error && "Error"}
-                  {success && "Success"}
+          {contextHolder}
         </motion.form>
       </motion.div>
     </motion.div>
