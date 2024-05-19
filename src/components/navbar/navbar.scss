@@ -12,6 +12,11 @@
     height: 100%;
     width: 100%;
 
+    @include desktop {
+      justify-content: flex-end;
+      padding: 40px;
+    }
+
     @include tablet {
       justify-content: flex-end;
       padding: 40px;
@@ -29,6 +34,10 @@
       letter-spacing: 4px;
       flex: 1;
       font-weight: 600;
+
+      @include desktop {
+        display: none;
+      }
 
       @include tablet {
         display: none;

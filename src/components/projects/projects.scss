@@ -1,6 +1,7 @@
 @import "../../app.scss";
 
 .projects {
+  background-color: white;
   position: relative;
   z-index: 1;
 
@@ -16,6 +17,10 @@
       font-size: 70px;
       font-weight: 600;
       color: #000000de;
+
+      @include desktop {
+        font-size: 32px;
+      }
 
       @include tablet {
         font-size: 32px;
@@ -64,6 +69,7 @@
 
       @include tablet {
         flex-direction: column;
+        gap: 20px;
       }
 
       @include mobile {
@@ -84,7 +90,6 @@
         }
 
         @include mobile {
-          width: 100%;
           max-height: 300px;
         }
 
@@ -93,10 +98,6 @@
           width: 95%;
           object-fit: cover;
           box-shadow: 0 4px 8px 0 rgba(132, 131, 131, 0.2), 5px 6px 20px 0 rgba(208, 208, 208, 0.248);
-
-          @include tablet {
-            width: 100%;
-          }
 
         }
       }
@@ -113,19 +114,24 @@
           align-items: center;
           text-align: center;
           padding: 5px;
+       
         }
 
         @include mobile {
           transform: none !important;
           align-items: center;
           text-align: center;
-          padding: 0;
+          gap:15px;
         }
 
         h2 {
           color: #000000db;
           font-size: 26px;
           font-weight: 600;
+
+          @include desktop {
+            font-size: 22px;
+          }
 
           @include mobile {
             font-size: 18px;
@@ -136,6 +142,10 @@
           color: #070707b9;
           font-size: 20px;
 
+          
+          @include desktop {
+            font-size: 16px;
+          }
           @include mobile {
             font-size: 14px;
           }

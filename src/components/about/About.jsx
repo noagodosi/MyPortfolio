@@ -5,7 +5,7 @@ import "./about.scss";
 
 const textVariants = {
   initial: {
-    y: 500,
+    y: 200,
     opacity: 0,
   },
   animate: {
@@ -18,21 +18,21 @@ const textVariants = {
   },
 };
 
-const projectsVariants = {
-  initial: {
-    x: -500,
-    opacity: 0,
-  },
-  animate: {
-    x: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.5,
-      staggerChildren: 0.1,
-      delay: 1,
-    },
-  },
-};
+// const projectsVariants = {
+//   initial: {
+//     y: 500,
+//     opacity: 0,
+//   },
+//   animate: {
+//     y: 0,
+//     opacity: 1,
+//     transition: {
+//       duration: 0.5,
+//       staggerChildren: 0.1,
+//       delay: 1,
+//     },
+//   },
+// };
 
 const About = () => {
   const downloadPDF = () => {
@@ -115,14 +115,14 @@ const About = () => {
 
       <motion.div
         className="buttomContainer"
-        variants={projectsVariants}
+        variants={textVariants}
         initial="initial"
         whileInView="animate"
       >
-        <motion.div className="titleContainer" variants={projectsVariants}>
+        <motion.div className="titleContainer" >
           <h2>My Latest Projects ...</h2>
         </motion.div>
-        <motion.div className="itemContainer" variants={projectsVariants}>
+        <motion.div className="itemContainer" >
           <motion.div className="item">
             <h4>BrideToBe</h4>
             <a onClick={() => document.getElementById("3").scrollIntoView()}>

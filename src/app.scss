@@ -29,7 +29,7 @@ section {
 @mixin mobile {
   overflow-x: hidden;
   overflow-y: hidden;
-  @media (max-width: 738px) {
+  @media (max-width: 765px) {
     @content;
   }
 }

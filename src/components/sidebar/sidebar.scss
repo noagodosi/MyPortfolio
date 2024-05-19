@@ -16,8 +16,12 @@
     background-color: rgba(232, 230, 230, 0.893);
     color: #000000ce;
 
+    @include desktop {
+      width: 250px;
+    }
+
     @include tablet {
-      width: 300px;
+      width: 250px;
     }
     @include mobile {
       width: 170px;
@@ -35,6 +39,11 @@
 
       a {
         font-size: 40px;
+
+        @include desktop {
+          font-size: 30px;
+        }  
+
         @include tablet {
           font-size: 30px;
         }
