@@ -69,12 +69,12 @@ const Contact = () => {
           <h2>noago212@gmail.com</h2>
           <h2>Israel</h2>
           <motion.div variants={variants} className="social">
-            <a href="https://github.com/noafadida">
+            <a href="https://github.com/noagodosi">
               {" "}
               <img src="/git.png" alt="" />
             </a>
 
-            <a href="https://il.linkedin.com/in/noa-fadida-35ba73216?trk=people-guest_people_search-card">
+            <a href="https://www.linkedin.com/in/noa-godosi-35ba73216/">
               {" "}
               <img src="/linkedin.png" alt="" />
             </a>

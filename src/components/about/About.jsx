@@ -18,22 +18,6 @@ const textVariants = {
   },
 };
 
-// const projectsVariants = {
-//   initial: {
-//     y: 500,
-//     opacity: 0,
-//   },
-//   animate: {
-//     y: 0,
-//     opacity: 1,
-//     transition: {
-//       duration: 0.5,
-//       staggerChildren: 0.1,
-//       delay: 1,
-//     },
-//   },
-// };
-
 const About = () => {
   const downloadPDF = () => {
     const pdfUrl = "./Noa_CV.pdf";
@@ -58,10 +42,19 @@ const About = () => {
       initial="initial"
       whileInView="animate"
     >
-      <motion.h1 variants={textVariants} initial="initial"
-      whileInView="animate">ABOUT ME</motion.h1>
-      <motion.div initial="initial"
-      whileInView="animate" className="textContainer" variants={textVariants}>
+      <motion.h1
+        variants={textVariants}
+        initial="initial"
+        whileInView="animate"
+      >
+        ABOUT ME
+      </motion.h1>
+      <motion.div
+        initial="initial"
+        whileInView="animate"
+        className="textContainer"
+        variants={textVariants}
+      >
         <div className="title">
           <h2>NOA</h2>
           <h3>/ SOFTWARE ENGINEER</h3>
@@ -71,7 +64,7 @@ const About = () => {
           <div className="profile">
             <h3>Hello, my name is Noa.</h3>
             <h4>
-              I am Software Engineering graduate I am an full-stack web & mobile
+              I am Software Engineering graduate and full-stack web & mobile
               developer.
             </h4>
             <h4>
@@ -119,10 +112,10 @@ const About = () => {
         initial="initial"
         whileInView="animate"
       >
-        <motion.div className="titleContainer" >
+        <motion.div className="titleContainer">
           <h2>My Latest Projects ...</h2>
         </motion.div>
-        <motion.div className="itemContainer" >
+        <motion.div className="itemContainer">
           <motion.div className="item">
             <h4>BrideToBe</h4>
             <a onClick={() => document.getElementById("3").scrollIntoView()}>
@@ -130,7 +123,7 @@ const About = () => {
             </a>
             <img src="./BRIDETOBE.png" />
           </motion.div>
-          <motion.div className="item" >
+          <motion.div className="item">
             <h4>BabyUp</h4>
             <a onClick={() => document.getElementById("1").scrollIntoView()}>
               See More
