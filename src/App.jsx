@@ -19,14 +19,13 @@ const App = () => {
         <About />
       </section>
 
+
       <Projects>
         <section id="1"></section>
         <section id="2"></section>
         <section id="3"></section>
       </Projects>
 
-    
-     
       <section id="Contact">
         <Contact />
       </section>
