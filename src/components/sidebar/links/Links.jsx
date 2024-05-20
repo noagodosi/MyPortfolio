@@ -31,8 +31,7 @@ const Links = ({setOpen}) => {
     <motion.div className="links" variants={variants}>
       {items.map((item) => (
         <motion.a
-          // href={`#${item}`}
-          onClick={() => { document.getElementById(`${item}`).scrollIntoView(); setOpen((prev) => !prev)}}
+          onClick={() => { document.getElementById(`${item}`).scrollIntoView(); setOpen((prev) => !prev); }}
           key={item}
           variants={itemVariants}
           whileHover={{ scale: 1.1, cursor: "pointer" }}

@@ -27,8 +27,7 @@ const items = [
     description:
       "A Wedding Bride Salon system that is used to schedule appointments and fully manages the reservation, including statistics about the website usage.",
     img: "BRIDETOBE.png",
-    technologies:
-      "Developed with React.js, Node.js, CSS, MongoDB. ",
+    technologies: "Developed with React.js, Node.js, CSS, MongoDB. ",
     git: "https://github.com/noafadida/BrideToBe",
   },
 ];
@@ -48,9 +47,9 @@ const itemVariants = {
     opacity: 1,
     transition: {
       duration: 1,
-      delay:0.4
+      delay: 0.4,
     },
-  }
+  },
 };
 
 const Single = ({ item }) => {
@@ -63,20 +62,41 @@ const Single = ({ item }) => {
   const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
 
   return (
-    <motion.section id={item.id} variants={itemVariants} initial="initial" whileInView="animate">
+    <motion.section
+      id={item.id}
+      variants={itemVariants}
+      initial="initial"
+      whileInView="animate"
+    >
       <div className="container">
         <div className="wrapper">
           <div className="imageContainer" ref={ref}>
-            <motion.img src={`/${item.img}`} variants={itemVariants} initial="initial" whileInView="animate"/>
+            <motion.img
+              src={`/${item.img}`}
+              variants={itemVariants}
+              initial="initial"
+              whileInView="animate"
+            />
           </div>
 
-          <motion.div className="textContainer" style={{ y }} variants={itemVariants} initial="initial" whileInView="animate">
+          <motion.div
+            className="textContainer"
+            style={{ y }}
+            variants={itemVariants}
+            initial="initial"
+            whileInView="animate"
+          >
             <h2>{item.title}</h2>
             <p>{item.description}</p>
             <p>{item.technologies}</p>
-            <motion.button      initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ delay:0.5, duration: 1 }} onClick={() => window.open(item.git)}>See More </motion.button>
+            <motion.button
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.5, duration: 1 }}
+              onClick={() => window.open(item.git)}
+            >
+              See More{" "}
+            </motion.button>
           </motion.div>
         </div>
       </div>

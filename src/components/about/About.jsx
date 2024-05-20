@@ -1,5 +1,4 @@
-import { delay, motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 
 import "./about.scss";
 

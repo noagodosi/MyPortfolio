@@ -26,14 +26,11 @@
         font-size: 32px;
       }
    
-  
       @include mobile {
         // padding-top: calc(100vh - 100px);
         font-size: 24px;
       }
     }
-
-  
   }
 
   .progressBar {
