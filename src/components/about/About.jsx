@@ -4,11 +4,11 @@ import "./about.scss";
 
 const textVariants = {
   initial: {
-    y: 200,
+    x: -200,
     opacity: 0,
   },
   animate: {
-    y: 0,
+    x: 0,
     opacity: 1,
     transition: {
       duration: 0.9,
@@ -36,7 +36,7 @@ const About = () => {
   return (
     <motion.div
       className="about"
-      id="About"
+      // id="About"
       variants={textVariants}
       initial="initial"
       whileInView="animate"
@@ -99,7 +99,7 @@ const About = () => {
                 document.getElementById("Contact").scrollIntoView()
               }
             >
-              Contact
+              Contact Me
             </motion.button>
           </div>
         </div>

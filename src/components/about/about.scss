@@ -4,7 +4,6 @@
   position: relative;
   z-index: 1;
   display: flex;
-  // justify-content: center;
   align-items: center;
   text-align: center;
   width: 100%;
@@ -167,8 +166,6 @@
         gap: 20px;
         padding: 30px;
 
-   
-
         button {
           background-color: #f6f5f2;
           color: #070707b9;
@@ -184,6 +181,7 @@
             width: 130px;
             border-radius: 6px;
             height: 30px;
+            cursor: none;
           }
 
           &:hover {
@@ -241,7 +239,7 @@
     }
 
     .itemContainer {
-      flex:1;
+      flex: 1;
       display: flex;
       padding: 20px;
       gap: 20px;

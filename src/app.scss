@@ -23,7 +23,7 @@ a {
 
 section {
   height: 100vh;
-  scroll-snap-align: center;
+  scroll-snap-align: start;
 }
 
 @mixin mobile {
@@ -37,7 +37,7 @@ section {
 @mixin tablet {
   overflow-x: hidden;
   overflow-y: hidden;
-  @media ( max-width: 1024px) {
+  @media (max-width: 1024px) {
     @content;
   }
 }
