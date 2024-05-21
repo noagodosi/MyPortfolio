@@ -18,7 +18,7 @@ const items = [
     description:
       "React Admin Dashboard App With Theming, Tables, Charts, Calendar, Kanban and More.",
     img: "ADMINDASHBOARD.png",
-    technologies: "Developed with React.js Syncfusion and Mongodb.",
+    technologies: "Developed with React.js, TypeScript, Syncfusion and Mongodb.",
     git: "https://github.com/noafadida/AdminDashboardShop",
   },
   {
