@@ -18,7 +18,8 @@ const items = [
     description:
       "React Admin Dashboard App With Theming, Tables, Charts, Calendar, Kanban and More.",
     img: "ADMINDASHBOARD.png",
-    technologies: "Developed with React.js, TypeScript, Syncfusion and Mongodb.",
+    technologies:
+      "Developed with React.js, TypeScript, Syncfusion and Mongodb.",
     git: "https://github.com/noafadida/AdminDashboardShop",
   },
   {
@@ -89,14 +90,15 @@ const Single = ({ item }) => {
             <h2>{item.title}</h2>
             <p>{item.description}</p>
             <p>{item.technologies}</p>
-            <motion.button
+            <motion.a
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 1 }}
               onClick={() => window.open(item.git)}
             >
-              See More{" "}
-            </motion.button>
+              See More
+              <a> 》》</a>
+            </motion.a>
           </motion.div>
         </div>
       </div>
@@ -116,7 +118,7 @@ const Projects = () => {
   return (
     <div className="projects" ref={ref} id="Projects">
       <div className="progress">
-        <h1>MY PROJECTS</h1>
+        <h2>MY PROJECTS</h2>
         <motion.div className="progressBar" style={{ scaleX }}></motion.div>
       </div>
       {items.map((item) => (

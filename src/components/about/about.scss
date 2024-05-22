@@ -12,30 +12,30 @@
   flex-direction: column;
   overflow: hidden;
 
-  h1 {
-    letter-spacing: 2px;
-    font-size: 70px;
-    font-weight: 600;
-    color: #000000de;
-    padding: 20px;
-    margin: 10px;
+  // h1 {
+  //   letter-spacing: 2px;
+  //   font-size: 70px;
+  //   font-weight: 600;
+  //   color: #000000de;
+  //   padding: 20px;
+  //   margin: 10px;
 
-    @include desktop {
-      font-size: 30px;
-      padding-top: 10px;
-    }
+  //   @include desktop {
+  //     font-size: 30px;
+  //     padding-top: 10px;
+  //   }
 
-    @include tablet {
-      font-size: 60px;
-      padding: 20px;
-    }
+  //   @include tablet {
+  //     font-size: 60px;
+  //     padding: 20px;
+  //   }
 
-    @include mobile {
-      font-size: 24px;
-      padding: 20px;
-      margin: 20px;
-    }
-  }
+  //   @include mobile {
+  //     font-size: 24px;
+  //     padding: 20px;
+  //     margin: 20px;
+  //   }
+  // }
 
   .textContainer {
     display: flex;
@@ -43,23 +43,31 @@
     justify-content: center;
     align-items: center;
 
+
     .title {
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: center;
       gap: 10px;
+      margin-top: 50px;
+      margin-bottom: 30px;
+
+      @include mobile {
+        margin-bottom: 10px;
+      }
+
       h2 {
         color: #000000db;
-        font-size: 24px;
+        font-size: 36px;
         font-weight: 500;
 
         @include desktop {
-          font-size: 20px;
+          font-size: 30px;
         }
 
         @include tablet {
-          font-size: 22px;
+          font-size: 30px;
         }
 
         @include mobile {
@@ -69,19 +77,19 @@
 
       h3 {
         color: #000000db;
-        font-size: 20px;
+        font-size: 34px;
         font-weight: 300;
 
         @include desktop {
-          font-size: 18px;
+          font-size: 26px;
         }
 
         @include tablet {
-          font-size: 20px;
+          font-size: 26px;
         }
 
         @include mobile {
-          font-size: 16px;
+          font-size: 18px;
         }
       }
     }
@@ -117,8 +125,9 @@
         }
 
         h3 {
-          // padding-bottom: 10px;
-          color: #070707b9;
+          padding-bottom: 10px;
+          color: rgb(187, 168, 168);
+          font-weight: 500;
           font-size: 18px;
 
           @include desktop {
@@ -131,7 +140,7 @@
         }
 
         h4 {
-          color: #070707b9;
+          color: #070707a2;
           font-size: 16px;
           font-weight: 500;
           // text-align: left;
@@ -145,10 +154,26 @@
             font-size: 12px;
             text-align: center;
           }
+
+          .textBold {
+            margin: 5px;
+            font-size: 17px;
+            color: rgb(187, 168, 168);
+
+            @include desktop {
+              font-size: 15px;
+              text-align: left;
+            }
+
+            @include mobile {
+              font-size: 13px;
+              text-align: center;
+            }
+          }
         }
         .contactEmail {
           margin-left: 5px;
-          color: #000000;
+          color: rgb(187, 168, 168);
           &:hover {
             background-color: rgba(248, 243, 243, 0.841);
           }
@@ -160,22 +185,18 @@
         }
       }
       .buttons {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
         padding: 30px;
-
         button {
-          background-color: #f6f5f2;
-          color: #070707b9;
+          background-color: rgba(214, 199, 199, 0.596);
+          color: #ffffff;
           border: none;
           border-radius: 10px;
-          width: 160px;
+          width: 150px;
           height: 40px;
           cursor: pointer;
           box-sizing: border-box;
-          box-shadow: 0 2px 2px 0 rgba(217, 216, 216, 0.737);
+          box-shadow: 0 2px 2px 0 rgba(124, 118, 118, 0.445);
+          font-size: 14px;
 
           @include mobile {
             width: 130px;
@@ -185,8 +206,6 @@
           }
 
           &:hover {
-            background-color: #f6f5f259;
-            font-weight: 500;
             scale: 105%;
           }
         }
@@ -194,6 +213,11 @@
     }
   }
   .titleContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 7px;
+
     @include desktop {
       margin-top: 0px;
     }
@@ -206,11 +230,12 @@
     }
 
     h2 {
-      color: rgb(150, 140, 140);
-      align-self: flex-start;
+      color: rgb(209, 198, 198);
+      display: flex;
       font-weight: 400;
       margin-bottom: 10px;
       font-size: 22px;
+      text-align: center;
 
       @include desktop {
         font-size: 20px;
@@ -220,6 +245,10 @@
         font-size: 18px;
         margin-bottom: 0px;
       }
+    }
+
+    .h2Projects {
+      color: rgb(150, 140, 140);
     }
   }
 
@@ -232,6 +261,7 @@
     justify-items: center;
     align-items: center;
     justify-content: center;
+    text-align: center;
 
     @include mobile {
       width: 85%;

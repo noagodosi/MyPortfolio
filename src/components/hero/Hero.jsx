@@ -39,7 +39,7 @@ const Hero = () => {
             <motion.h1 variants={textVariants}>Full Stack Engineer</motion.h1>
             <h2>
               {" "}
-              I am Software Engineering graduate and full-stack web & mobile
+              I am Software Engineer and full-stack web & mobile
               developer.
             </h2>
 

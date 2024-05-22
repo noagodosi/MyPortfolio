@@ -24,18 +24,24 @@ const itemVariants = {
   },
 };
 
-const Links = ({setOpen}) => {
+const Links = ({ setOpen }) => {
   const items = ["HomePage", "About", "Projects", "Contact"];
+  const handleClick = (item, e) => {
+    e.preventDefault();
+    setOpen((prev) => !prev);
+    document.getElementById(`${item}`).scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <motion.div className="links" variants={variants}>
       {items.map((item) => (
         <motion.a
-          onClick={() => {  setOpen((prev) => !prev); document.getElementById(`${item}`).scrollIntoView(); }}
+          // href={`#${item}`}
+          onClick={(e) => handleClick(item, e)}
           key={item}
           variants={itemVariants}
           whileHover={{ scale: 1.1, cursor: "pointer" }}
-          whileTap={{ scale: 0.95, }}
+          whileTap={{ scale: 0.95,}}
         >
           {item}
         </motion.a>

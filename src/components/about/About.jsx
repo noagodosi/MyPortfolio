@@ -33,6 +33,11 @@ const About = () => {
       });
   };
 
+  const handleContact = (e) => {
+    e.preventDefault();
+    document.getElementById("Contact").scrollIntoView({ block: "start" });
+  };
+
   return (
     <motion.div
       className="about"
@@ -41,13 +46,6 @@ const About = () => {
       initial="initial"
       whileInView="animate"
     >
-      <motion.h1
-        variants={textVariants}
-        initial="initial"
-        whileInView="animate"
-      >
-        ABOUT ME
-      </motion.h1>
       <motion.div
         initial="initial"
         whileInView="animate"
@@ -61,14 +59,15 @@ const About = () => {
 
         <div className="wrapper">
           <div className="profile">
-            <h3>Hello, my name is Noa.</h3>
+            <h3>Hi, My Name Is NOA</h3>
             <h4>
-              I am Software Engineering graduate and full-stack web & mobile
-              developer.
+              I`m
+              <a className="textBold">Software Engineer</a>and full-stack
+              web & mobile developer
             </h4>
             <h4>
               Feel free to take a look at my latest projects on the web
-              portfolio page.
+              portfolio page
             </h4>
             <h4>
               Available
@@ -91,16 +90,6 @@ const About = () => {
             >
               Download Resume
             </motion.button>
-            <motion.button
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ delay: 0.6, duration: 1 }}
-              onClick={() =>
-                document.getElementById("Contact").scrollIntoView()
-              }
-            >
-              Contact Me
-            </motion.button>
           </div>
         </div>
       </motion.div>
@@ -112,7 +101,9 @@ const About = () => {
         whileInView="animate"
       >
         <motion.div className="titleContainer">
-          <h2>My Latest Projects ...</h2>
+          <h2>My Latest </h2>
+          <h2 className="h2Projects"> PROJECTS</h2>
+          <h2>...</h2>
         </motion.div>
         <motion.div className="itemContainer">
           <motion.div className="item">
