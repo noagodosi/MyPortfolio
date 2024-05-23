@@ -4,6 +4,21 @@ import "./about.scss";
 
 const textVariants = {
   initial: {
+    // x: -200,
+    opacity: 0,
+  },
+  animate: {
+    // x: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const projectsVariants = {
+  initial: {
     x: -200,
     opacity: 0,
   },
@@ -11,7 +26,7 @@ const textVariants = {
     x: 0,
     opacity: 1,
     transition: {
-      duration: 0.9,
+      duration: 0.5,
       staggerChildren: 0.1,
     },
   },
@@ -31,11 +46,6 @@ const About = () => {
         link.click();
         link.parentNode.removeChild(link);
       });
-  };
-
-  const handleContact = (e) => {
-    e.preventDefault();
-    document.getElementById("Contact").scrollIntoView({ block: "start" });
   };
 
   return (
@@ -96,7 +106,7 @@ const About = () => {
 
       <motion.div
         className="buttomContainer"
-        variants={textVariants}
+        variants={projectsVariants}
         initial="initial"
         whileInView="animate"
       >

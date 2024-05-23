@@ -97,7 +97,7 @@ const Single = ({ item }) => {
               onClick={() => window.open(item.git)}
             >
               See More
-              <a> 》》</a>
+              <b> 》》</b>
             </motion.a>
           </motion.div>
         </div>
