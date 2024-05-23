@@ -4,11 +4,11 @@ import "./hero.scss";
 
 const textVariants = {
   initial: {
-    x: -500,
+    // x: -200,
     opacity: 0,
   },
   animate: {
-    x: 0,
+    // x: 0,
     opacity: 1,
     transition: {
       duration: 1,
@@ -19,14 +19,17 @@ const textVariants = {
 
 const Hero = () => {
   return (
-    <div className="hero">
+    < div className="hero" >
       <div className="wrapper">
         <div className="containerBg">
           <div className="heroImg">
-            <img src="/hero3.png" />
-            <div className="img2">
-              <img src="/img2.png" />
-            </div>
+            <motion.img src="/hero3.png"  variants={textVariants}
+            initial="initial"
+            animate="animate"/>
+            <motion.div className="img2" initial="initial"
+            animate="animate" variants={textVariants}>
+              <motion.img src="/img2.png"   />
+            </motion.div>
           </div>
 
           <motion.div
@@ -37,11 +40,11 @@ const Hero = () => {
           >
             <motion.h1 variants={textVariants}>NOA</motion.h1>
             <motion.h1 variants={textVariants}>Full Stack Engineer</motion.h1>
-            <h2>
+            <motion.h2 variants={textVariants}>
               {" "}
-              I am Software Engineer and full-stack web & mobile
-              developer.
-            </h2>
+              I`m Software Engineer and full-stack web & mobile
+              developer
+            </motion.h2>
 
             <motion.div className="buttons" variants={textVariants}>
               <motion.button

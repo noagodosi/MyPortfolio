@@ -124,8 +124,8 @@
         h2 {
           // color: #000000db;
           color: rgb(187, 168, 168);
-          font-size: 26px;
-          font-weight: 500;
+          font-size: 28px;
+          font-weight: 400;
 
           @include desktop {
             font-size: 22px;
@@ -152,10 +152,15 @@
             width:max-content;
             cursor: pointer;
             font-size: 18px;
-            color: #070707b9;
+            color: rgb(187, 168, 168);
+
+            @include desktop {
+              font-size: 14px;
+            }
   
             @include mobile {
               cursor: none;
+              font-size: 12px;
             }
   
             &:hover {

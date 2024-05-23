@@ -107,25 +107,28 @@ const About = () => {
         </motion.div>
         <motion.div className="itemContainer">
           <motion.div className="item">
+          <img src="./BRIDETOBE.png" />
             <h4>BrideToBe</h4>
             <a onClick={() => document.getElementById("3").scrollIntoView()}>
               See More
             </a>
-            <img src="./BRIDETOBE.png" />
+           
           </motion.div>
           <motion.div className="item">
+          <img src="./BABYUP.png" />
             <h4>BabyUp</h4>
             <a onClick={() => document.getElementById("1").scrollIntoView()}>
               See More
             </a>
-            <img src="./BABYUP.png" />
+           
           </motion.div>
           <motion.div className="item">
+          <img src="./ADMINDASHBOARD.png" />
             <h4>Admin Dashboard</h4>
             <a onClick={() => document.getElementById("2").scrollIntoView()}>
               See More
             </a>
-            <img src="./ADMINDASHBOARD.png" />
+            
           </motion.div>
         </motion.div>
       </motion.div>
