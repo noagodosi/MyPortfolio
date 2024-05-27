@@ -1,14 +1,12 @@
-import { motion } from "framer-motion";
+import { Variants, motion } from "framer-motion";
 
 import "./about.scss";
 
-const textVariants = {
+const textVariants :Variants= {
   initial: {
-    // x: -200,
     opacity: 0,
   },
   animate: {
-    // x: 0,
     opacity: 1,
     transition: {
       duration: 0.5,
@@ -17,7 +15,7 @@ const textVariants = {
   },
 };
 
-const projectsVariants = {
+const projectsVariants : Variants= {
   initial: {
     x: -200,
     opacity: 0,
@@ -44,7 +42,7 @@ const About = () => {
         link.setAttribute("download", "Noa_CV.pdf");
         document.body.appendChild(link);
         link.click();
-        link.parentNode.removeChild(link);
+        link.parentNode?.removeChild(link);
       });
   };
 
@@ -119,7 +117,7 @@ const About = () => {
           <motion.div className="item">
           <img src="./BRIDETOBE.png" />
             <h4>BrideToBe</h4>
-            <a onClick={() => document.getElementById("3").scrollIntoView()}>
+            <a onClick={() => document?.getElementById("3")?.scrollIntoView() }>
               See More
             </a>
            
@@ -127,7 +125,7 @@ const About = () => {
           <motion.div className="item">
           <img src="./BABYUP.png" />
             <h4>BabyUp</h4>
-            <a onClick={() => document.getElementById("1").scrollIntoView()}>
+            <a onClick={() => document?.getElementById("1")?.scrollIntoView()}>
               See More
             </a>
            
@@ -135,7 +133,7 @@ const About = () => {
           <motion.div className="item">
           <img src="./ADMINDASHBOARD.png" />
             <h4>Admin Dashboard</h4>
-            <a onClick={() => document.getElementById("2").scrollIntoView()}>
+            <a onClick={() => document?.getElementById("2")?.scrollIntoView()}>
               See More
             </a>
             

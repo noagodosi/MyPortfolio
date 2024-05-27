@@ -1,8 +1,29 @@
-import { motion, useScroll, useSpring, useTransform } from "framer-motion";
-import "./projects.scss";
+import { Variants, motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { useRef } from "react";
 
-const items = [
+import "./projects.scss";
+
+type TProject = {
+  id: string,
+  title: string,
+  description: string,
+  img: string,
+  technologies: string,
+  git: string
+
+}
+
+interface SingleProps {
+  item: TProject;
+  id: string,
+}
+
+interface ProjectsProps {
+  children: any
+}
+
+
+const items: TProject[] = [
   {
     id: "1",
     title: "BabyUp ",
@@ -33,7 +54,7 @@ const items = [
   },
 ];
 
-const itemVariants = {
+const itemVariants: Variants = {
   initial: {
     opacity: 0,
   },
@@ -41,7 +62,6 @@ const itemVariants = {
     opacity: 1,
     transition: {
       duration: 1,
-      // staggerChildren: 0.6,
     },
   },
   button: {
@@ -53,8 +73,8 @@ const itemVariants = {
   },
 };
 
-const Single = ({ item }) => {
-  const ref = useRef();
+const Single: React.FC<SingleProps> = ({ item }) => {
+  const ref = useRef<HTMLDivElement>(null)
 
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -106,8 +126,8 @@ const Single = ({ item }) => {
   );
 };
 
-const Projects = () => {
-  const ref = useRef();
+const Projects: React.FC<ProjectsProps> = () => {
+  const ref = useRef<HTMLDivElement>(null);
 
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -121,7 +141,7 @@ const Projects = () => {
         <h2>MY PROJECTS</h2>
         <motion.div className="progressBar" style={{ scaleX }}></motion.div>
       </div>
-      {items.map((item) => (
+      {items.map((item: TProject) => (
         <Single item={item} key={item.id} id={item.id} />
       ))}
     </div>

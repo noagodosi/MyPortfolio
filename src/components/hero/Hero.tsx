@@ -1,14 +1,13 @@
-import { motion } from "framer-motion";
+import { Variants, motion } from "framer-motion";
 
 import "./hero.scss";
 
-const textVariants = {
+
+const textVariants: Variants = {
   initial: {
-    // x: -200,
     opacity: 0,
   },
   animate: {
-    // x: 0,
     opacity: 1,
     transition: {
       duration: 1,
@@ -23,12 +22,12 @@ const Hero = () => {
       <div className="wrapper">
         <div className="containerBg">
           <div className="heroImg">
-            <motion.img src="/hero3.png"  variants={textVariants}
-            initial="initial"
-            animate="animate"/>
+            <motion.img src="/hero3.png" variants={textVariants}
+              initial="initial"
+              animate="animate" />
             <motion.div className="img2" initial="initial"
-            animate="animate" variants={textVariants}>
-              <motion.img src="/img2.png"   />
+              animate="animate" variants={textVariants}>
+              <motion.img src="/img2.png" />
             </motion.div>
           </div>
 
@@ -50,7 +49,7 @@ const Hero = () => {
               <motion.button
                 variants={textVariants}
                 onClick={() => {
-                  document.getElementById("Projects").scrollIntoView();
+                  document?.getElementById("Projects")?.scrollIntoView();
                 }}
               >
                 See My Latest Projects
@@ -58,7 +57,7 @@ const Hero = () => {
               <motion.button
                 variants={textVariants}
                 onClick={() =>
-                  document.getElementById("Contact").scrollIntoView()
+                  document?.getElementById("Contact")?.scrollIntoView()
                 }
               >
                 Contact Me

@@ -1,11 +1,11 @@
-import { motion } from "framer-motion";
+import { useRef, FormEvent } from "react";
+import { Variants, motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
-import { Button, message, Space } from "antd";
+import { message } from "antd";
 
 import "./contact.scss";
-import { useRef, useState } from "react";
 
-const variants = {
+const variants: Variants = {
   initial: {
     y: 500,
     opacity: 0,
@@ -21,7 +21,7 @@ const variants = {
 };
 
 const Contact = () => {
-  const formRef = useRef();
+  const formRef = useRef<HTMLFormElement>(null);
   const [messageApi, contextHolder] = message.useMessage();
 
   const successMsg = () => {
@@ -30,6 +30,7 @@ const Contact = () => {
       content: "Your message was sent successfully!",
     });
   };
+
   const errorMsg = () => {
     messageApi.open({
       type: "error",
@@ -37,23 +38,25 @@ const Contact = () => {
     });
   };
 
-  const sendEmail = (e) => {
+  const sendEmail = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    emailjs
-      .sendForm(
-        "service_mw2sq1y",
-        "template_w1j6ipj",
-        formRef.current,
-        "V4QzWzFuTj0sjSva3"
-      )
-      .then(
-        (result) => {
-          successMsg();
-        },
-        (error) => {
-          errorMsg();
-        }
-      );
+    if (formRef && formRef.current) {
+      emailjs
+        .sendForm(
+          "service_mw2sq1y",
+          "template_w1j6ipj",
+          formRef.current,
+          "V4QzWzFuTj0sjSva3"
+        )
+        .then(
+          () => {
+            successMsg();
+          },
+          () => {
+            errorMsg();
+          }
+        );
+    }
   };
   return (
     <motion.div

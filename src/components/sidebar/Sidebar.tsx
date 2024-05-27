@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { Variants, motion } from "framer-motion";
 import Links from "./links/Links";
 import ToggleButton from "./toggleButton/ToggleButton";
 
 import "./sidebar.scss";
 
-const variants = {
+const variants: Variants = {
   open: {
     clipPath: "circle(1800px at 50px 50px)",
     transition: {
@@ -25,7 +25,7 @@ const variants = {
 };
 
 const Sidebar = () => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState<boolean>(false);
 
   return (
     <motion.div className="sidebar" animate={open ? "open" : "closed"}>
