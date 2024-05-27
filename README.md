@@ -1,3 +1,3 @@
 # React + Vite
 
-Using React working in Vite with HMR and some ESLint rules.
+Using React working in Vite with HMR and some ESLint rules..
